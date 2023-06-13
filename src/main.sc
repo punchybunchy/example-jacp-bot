@@ -5,6 +5,12 @@ theme: /
     state: Start
         q!: $regex</start>
         a: Начнём.
+        a: Добро пожаловать!
+        intent: /Супер! || toState = "/Hello"
+        intent: /Супер || toState = "/Bye"
+        intent: /Суперски || toState = "/NoMatch"
+        intent: /Отлично || toState = "./"
+        event: noMatch || toState = "./"
 
     state: Hello
         intent!: /привет
